@@ -1,0 +1,29 @@
+$primary: #03263a;
+$secondary: #8f5325;
+$success: #29c0b1;
+$info: #2c50ed;
+$warning: #fbbc06;
+$danger: #ff3366;
+$light: #f8f9fa;
+$dark: #222437;
+
+$theme-colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+    light: $light,
+    dark: $dark,
+);
+
+
+$btn-padding-y:10px;
+$btn-padding-x:16px;
+$btn-font-weight:500;
+$btn-font-size:14px;
+$btn-line-height:1;
+$btn-border-radius:4px;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
