@@ -1,23 +1,11 @@
-$primary: #03263a;
+$primary: #0067f7;
 $secondary: #8f5325;
-$success: #29c0b1;
+$success: #28e2a4;
 $info: #2c50ed;
 $warning: #fbbc06;
-$danger: #ff3366;
-$light: #f8f9fa;
+$danger: #e21649;
+$light: #e6eaec;
 $dark: #222437;
-
-$theme-colors: (
-    primary: $primary,
-    secondary: $secondary,
-    success: $success,
-    info: $info,
-    warning: $warning,
-    danger: $danger,
-    light: $light,
-    dark: $dark,
-);
-
 
 $btn-padding-y:10px;
 $btn-padding-x:16px;
@@ -25,5 +13,46 @@ $btn-font-weight:500;
 $btn-font-size:14px;
 $btn-line-height:1;
 $btn-border-radius:4px;
+
+$btn-padding-y-sm:8px;
+$btn-padding-x-sm:10px;
+$btn-font-size-sm:12px;
+$btn-border-radius-sm:3px;
+
+$form-label-margin-bottom:8px;
+$form-label-font-size:14px;
+$form-label-font-weight:700;
+
+$input-padding-y:10px;
+$input-padding-x:16px;
+$input-font-size:14px;
+$input-color:#4d5a6a;
+$input-bg:#f5f9ff;
+$input-border-width:1px;
+$input-border-color:#f5f9ff;
+$input-placeholder-color:#4d5a6a;
+$input-border-radius:2px;
+$input-focus-border-color:#2e84ff;
+$input-focus-box-shadow:none;
+
+$badge-padding-y:7px;
+$badge-padding-x:9px;
+$badge-font-size:11px;
+$badge-border-radius:4px;
+
+$card-cap-padding-y:16px;
+$card-cap-padding-x:20px;
+$card-cap-bg:#fff;
+$card-border-color:rgba(4, 32, 69, 0.1);
+$card-inner-border-radius:4px;
+$card-spacer-y:16px;
+$card-spacer-x:20px;
+$card-title-spacer-y:0;
+
+$modal-header-border-color:#dce1e7;
+$modal-header-border-width:1px;
+$modal-footer-bg:#f6f8fb;
+$modal-footer-border-color:#dce1e7;
+$modal-footer-border-width:1px;
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';

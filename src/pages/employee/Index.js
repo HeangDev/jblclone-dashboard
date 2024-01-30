@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 import $ from "jquery";
 import "jquery/dist/jquery.min.js";
@@ -29,7 +30,7 @@ const List = () => {
                             <h3 className="card-title">Employee List</h3>
                         </div>
                         <div className="col-sm-7 text-sm-end">
-                            <button type="button" className="btn btn-primary">Add Employee</button>
+                            <Link to="/employee/create" className="btn btn-primary">Add Employee</Link>
                         </div>
                     </div>
                 </div>

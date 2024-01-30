@@ -63,15 +63,17 @@ body{font-family:'Roboto', sans-serif !important;font-size:16px;font-weight:400;
 .card.sa-card-danger{color:#fff;background-color:#ff3366;}
 .card.sa-card-dark{color:#fff;background-color:#222437;}
 
-.card{border:1px solid rgba(230, 230, 230, 0.41) !important;box-shadow:5px 11px 23px -13px #e5e5e5;-webkit-box-shadow:5px 11px 23px -13px #e5e5e5;-moz-box-shadow:5px 11px 23px -13px #e5e5e5;-ms-box-shadow:5px 11px 23px -13px #e5e5e5;}
+//.card{border:1px solid rgba(230, 230, 230, 0.41) !important;box-shadow:5px 11px 23px -13px #e5e5e5;-webkit-box-shadow:5px 11px 23px -13px #e5e5e5;-moz-box-shadow:5px 11px 23px -13px #e5e5e5;-ms-box-shadow:5px 11px 23px -13px #e5e5e5;}
 
 div.dataTables_wrapper div.dataTables_length label{font-size:14px;}
 div.dataTables_wrapper div.dataTables_filter label{font-size:14px;}
 table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, table.dataTable tfoot td{font-size:14px;color:#4a4a4a;font-weight:500;}
+table.dataTable>tbody>tr{vertical-align:middle;}
+table.dataTable td, table.dataTable th{font-size:14px;}
 table.dataTable td.dataTables_empty, table.dataTable th.dataTables_empty{font-size:14px;}
 div.dataTables_wrapper div.dataTables_info{font-size:14px;white-space:nowrap;}
 
-
+.col-form-label.required:after, .form-label.required:after{content:"*";margin-left:0.25rem;color:#d63939;}
 
 
 

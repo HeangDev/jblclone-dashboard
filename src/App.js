@@ -4,7 +4,7 @@ import DashboardLayout from './layouts/MainLayout'
 
 import Dashboard from './pages/dashboard'
 
-import Employee from './pages/employee/list'
+import Employee from './pages/employee/Index'
 import AddEmployee from './pages/employee/create'
 import EditEmployee from './pages/employee/edit'
 
@@ -18,10 +18,8 @@ const App = () => {
             <DashboardLayout>
                 <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="employee" element={<Employee />}>
-                        <Route path="create" element={<AddEmployee />} />
-                        <Route path=":id" element={<EditEmployee />} />
-                    </Route>
+                    <Route path="/employee" element={<Employee />} />
+                    <Route path="/employee/create" element={<AddEmployee />} />
                     <Route path="/department" element={<DepartmentIndex />} />
                     <Route path="/position" element={<PositionIndex />} />
                     <Route path="/branch" element={<BranchIndex />} />
