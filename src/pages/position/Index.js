@@ -44,7 +44,7 @@ const Index = () => {
     }, [])
     return (
         <>
-           <div className="card">
+            <div className="card">
                 <div className="card-header">
                     <div className="row align-items-center">
                         <div className="col-sm-5">
