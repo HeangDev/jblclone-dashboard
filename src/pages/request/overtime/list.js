@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2'
+import axios from 'axios'
+
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 import $ from "jquery";
 import "jquery/dist/jquery.min.js";
@@ -8,6 +15,13 @@ import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import 'datatables.net-responsive-bs5/js/responsive.bootstrap5'
 
 const ListOvertime = () => {
+    const { register, handleSubmit, formState: {errors}, clearErrors } = useForm({criteriaMode: "all"});
+    const [show, setShow] = useState(false);
+
+    const handleCloseModal = () => {
+        setShow(false)
+        clearErrors()
+    }
     useEffect(() => {
         if (!$.fn.dataTable.isDataTable("#tbl_list")) {
             $(document).ready(function () {
@@ -31,7 +45,7 @@ const ListOvertime = () => {
                             <h5 className="card-title">My Overtime Requests</h5>
                         </div>
                         <div className="col-sm-7 text-sm-end">
-                            
+                            <Button variant="primary" onClick={() => setShow(true)}>Request Overtime</Button>
                         </div>
                     </div>
                 </div>
@@ -65,6 +79,47 @@ const ListOvertime = () => {
                     </table>
                 </div>
             </div>
+            <Modal centered show={show} onHide={handleCloseModal} animation={false}>
+                <Form
+                    autoComplete="off"
+                    onSubmit={handleSubmit(() => {
+                        
+                    })}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title>Submit an Overtime Request</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form.Group className="mb-3">
+                            <Form.Label className="required">Date</Form.Label>
+                            <Form.Control
+                                type="date" placeholder="Enter Position Name"/>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label className="required">Duration</Form.Label>
+                            <Form.Control
+                                type="number" placeholder="Enter Duration"/>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label className="required">Reason</Form.Label>
+                            <Form.Control
+                                as="textarea" rows={3} placeholder="Enter Reason"
+                            />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Status</Form.Label>
+                            <Form.Select>
+                                <option value="0">Planned</option>
+                                <option value="1">Requested</option>
+                            </Form.Select>
+                        </Form.Group>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="light me-auto" onClick={handleCloseModal}>Close</Button>
+                        <Button variant="primary" type="submit">Request Overtime</Button>
+                    </Modal.Footer>
+                </Form>
+            </Modal>
         </>
     )
 }
