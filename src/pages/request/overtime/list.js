@@ -7,12 +7,12 @@ import 'datatables.net-bs5/js/dataTables.bootstrap5'
 import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import 'datatables.net-responsive-bs5/js/responsive.bootstrap5'
 
-const Leaves = () => {
+const ListOvertime = () => {
     useEffect(() => {
-        if (!$.fn.dataTable.isDataTable("#tbl_leaves")) {
+        if (!$.fn.dataTable.isDataTable("#tbl_list")) {
             $(document).ready(function () {
                 setTimeout(function () {
-                    $("#tbl_leaves").DataTable({
+                    $("#tbl_list").DataTable({
                         pageLength: 10,
                         processing: true,
                         destroy: true,
@@ -28,7 +28,7 @@ const Leaves = () => {
                 <div className="card-header">
                     <div className="row align-items-center">
                         <div className="col-sm-5">
-                            <h5 className="card-title">Leave Requests Submitted</h5>
+                            <h5 className="card-title">My Overtime Requests</h5>
                         </div>
                         <div className="col-sm-7 text-sm-end">
                             
@@ -36,42 +36,30 @@ const Leaves = () => {
                     </div>
                 </div>
                 <div className="card-body">
-                    <table className="table table-striped" id="tbl_leaves" style={{width: "100%"}}>
+                    <table className="table table-striped" id="tbl_list" style={{width: "100%"}}>
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
+                                <th>Date</th>
                                 <th>Duration</th>
-                                <th>Type</th>
+                                <th>Reason</th>
                                 <th>Status</th>
-                                <th>Requested</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Sim Kimheang</td>
-                                <td>01/01/2025 (Morning)</td>
-                                <td>01/15/2025 (Afternoon)</td>
-                                <td>1 Day</td>
+                                <td>01/01/2025</td>
+                                <td>8</td>
                                 <td>Annual Leave</td>
                                 <td><div className="badge text-bg-warning">Requested</div></td>
-                                <td>01/29/2024</td>
-                                <td></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>John Doe</td>
-                                <td>01/01/2025 (Morning)</td>
-                                <td>01/01/2025 (Morning)</td>
-                                <td>0.5 Half-Day</td>
+                                <td>2</td>
+                                <td>01/01/2025</td>
+                                <td>3</td>
                                 <td>Annual Leave</td>
                                 <td><div className="badge text-bg-success">Accepted</div></td>
-                                <td>01/29/2024</td>
-                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -81,4 +69,4 @@ const Leaves = () => {
     )
 }
 
-export default Leaves
+export default ListOvertime

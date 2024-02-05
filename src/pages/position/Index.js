@@ -74,8 +74,8 @@ const Index = () => {
                                     <td>-</td>
                                     <td><div className="badge text-bg-success">Active</div></td>
                                     <td>
-                                        <button type="button" className="btn btn-danger btn-sm me-lg-2"><i class="bi bi-trash3"></i> Delete</button>
-                                        <button type="button" className="btn btn-info btn-sm"><i class="bi bi-pencil-square"></i> Edit</button>
+                                        <button type="button" className="btn btn-danger btn-sm me-lg-2"><i className="bi bi-trash3"></i> Delete</button>
+                                        <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> Edit</button>
                                     </td>
                                 </tr>
                             </tbody>

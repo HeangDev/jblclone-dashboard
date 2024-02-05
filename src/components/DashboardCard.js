@@ -8,7 +8,7 @@ const DashboardCard = ({ cardBg, cardTitle, cardTotal, cardSubtitle }) => {
                     <div className="card-body">
                         <div className="d-flex align-items-center">
                             <div className="sa-icon">
-                                <i class="bi bi-clipboard-data"></i>
+                                <i className="bi bi-clipboard-data"></i>
                             </div>
                             <p className="sa-title">{cardTitle}</p>
                         </div>

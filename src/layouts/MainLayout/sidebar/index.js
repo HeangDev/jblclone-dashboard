@@ -5,7 +5,7 @@ import SubMenu from './SubMenu'
 const Sidebar = () => {
     return (
         <>
-            <div className="sa-sidebar">
+            <div className="sa-sidebar sa-sidebar-offcanvas">
                 <div className="sa-sidebar-profile">
                     <div className="d-flex align-items-center justify-content-between">
                         <img src="https://demo.bootstrapdash.com/datavizui/template/images/faces/face5.jpg" alt="Sim Kimheang"/>

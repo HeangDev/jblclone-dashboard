@@ -4,6 +4,8 @@ import $ from "jquery";
 import "jquery/dist/jquery.min.js";
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import 'datatables.net-bs5/js/dataTables.bootstrap5'
+import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
+import 'datatables.net-responsive-bs5/js/responsive.bootstrap5'
 const Overtime = () => {
     useEffect(() => {
         if (!$.fn.dataTable.isDataTable("#tbl_overtime")) {
@@ -33,32 +35,30 @@ const Overtime = () => {
                     </div>
                 </div>
                 <div className="card-body">
-                    <div className="table-responsive-sm">
-                        <table className="table table-striped" id="tbl_overtime">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Duration</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Sim Kimheang</td>
-                                    <td>01/01/2025</td>
-                                    <td>8</td>
-                                    <td><div className="badge text-bg-success">Accepted</div></td>
-                                    <td>
+                    <table className="table table-striped" id="tbl_overtime" style={{width: "100%"}}>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Duration</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sim Kimheang</td>
+                                <td>01/01/2025</td>
+                                <td>8</td>
+                                <td><div className="badge text-bg-success">Accepted</div></td>
+                                <td>
 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </>

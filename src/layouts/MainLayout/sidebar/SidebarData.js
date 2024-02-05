@@ -2,14 +2,14 @@ export const SidebarData = [
     {
         title: "Dashboard",
         path: "/dashboard",
-        icon: <i class="bi bi-speedometer2"></i>,
+        icon: <i className="bi bi-speedometer2"></i>,
     },
     {
         title: "Employee",
         path: "/employee",
-        icon: <i class="bi bi-people"></i>,
-        iconClosed: <i class="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i class="bi bi-chevron-down sa-menu-arrow"></i>,
+        icon: <i className="bi bi-people"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
                 title: "List",
@@ -26,11 +26,10 @@ export const SidebarData = [
         ]
     },
     {
-        title: "Requests",
-        path: "/requests",
-        icon: <i class="bi bi-clipboard-check"></i>,
-        iconClosed: <i class="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i class="bi bi-chevron-down sa-menu-arrow"></i>,
+        title: "Leave Requests",
+        icon: <i className="bi bi-clipboard-check"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
                 title: "My summary",
@@ -47,11 +46,27 @@ export const SidebarData = [
         ]
     },
     {
+        title: "Overtime",
+        icon: <i className="bi bi-pc-display-horizontal"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
+        subNav: [
+            {
+                title: "Request a overtime",
+                path: "/overtime/create",
+            },
+            {
+                title: "List of overtime",
+                path: "/overtime/list",
+            }
+        ]
+    },
+    {
         title: "Approval",
         path: "/approval",
-        icon: <i class="bi bi-check2-circle"></i>,
-        iconClosed: <i class="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i class="bi bi-chevron-down sa-menu-arrow"></i>,
+        icon: <i className="bi bi-check2-circle"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
                 title: "Leaves",
@@ -66,29 +81,29 @@ export const SidebarData = [
     {
         title: "Department",
         path: "/department",
-        icon: <i class="bi bi-database"></i>,
+        icon: <i className="bi bi-database"></i>,
     },
     {
         title: "Position",
         path: "/position",
-        icon: <i class="bi bi-diagram-3"></i>,
+        icon: <i className="bi bi-diagram-3"></i>,
     },
     {
         title: "Branch",
         path: "/branch",
-        icon: <i class="bi bi-building"></i>,
+        icon: <i className="bi bi-building"></i>,
     },
     {
         title: "Calendar",
         path: "/calendar",
-        icon: <i class="bi bi-calendar2-date"></i>,
+        icon: <i className="bi bi-calendar2-date"></i>,
     },
     {
         title: "Assets",
         path: "/assets",
-        icon: <i class="bi bi-keyboard"></i>,
-        iconClosed: <i class="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i class="bi bi-chevron-down sa-menu-arrow"></i>,
+        icon: <i className="bi bi-keyboard"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
                 title: "Attendance",
@@ -103,9 +118,9 @@ export const SidebarData = [
     {
         title: "Report",
         path: "/report",
-        icon: <i class="bi bi-clipboard2-data"></i>,
-        iconClosed: <i class="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i class="bi bi-chevron-down sa-menu-arrow"></i>,
+        icon: <i className="bi bi-clipboard2-data"></i>,
+        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
                 title: "Attendance",
