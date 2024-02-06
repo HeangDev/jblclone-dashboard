@@ -15,6 +15,8 @@ import DepartmentIndex from './pages/department/Index'
 import PositionIndex from './pages/position/Index'
 import BranchIndex from './pages/branch/Index'
 
+import SummaryLeaves from './pages/request/leaves/summary';
+import ListLeaves from './pages/request/leaves/list';
 import ListOvertime from './pages/request/overtime/list';
 
 import Calendar from './pages/calendar';
@@ -34,6 +36,8 @@ const App = () => {
                     <Route path="/branch" element={<BranchIndex />} />
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/overtime/list" element={<ListOvertime />} />
+                    <Route path="/leave/list" element={<ListLeaves />} />
+                    <Route path="/leave/summary" element={<SummaryLeaves />} />
                 </Routes>
             </DashboardLayout>
         </>

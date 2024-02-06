@@ -33,15 +33,11 @@ export const SidebarData = [
         subNav: [
             {
                 title: "My summary",
-                path: "/employee",
-            },
-            {
-                title: "Request a leave",
-                path: "/employee/create",
+                path: "/leave/summary",
             },
             {
                 title: "List of leave requests",
-                path: "/employee/create",
+                path: "/leave/list",
             }
         ]
     },
@@ -51,10 +47,6 @@ export const SidebarData = [
         iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
         iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
-            {
-                title: "Request a overtime",
-                path: "/overtime/create",
-            },
             {
                 title: "List of overtime",
                 path: "/overtime/list",
