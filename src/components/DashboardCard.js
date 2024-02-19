@@ -3,7 +3,7 @@ import React from 'react'
 const DashboardCard = ({ cardBg, cardTitle, cardTotal, cardSubtitle }) => {
     return (
         <>
-            <div className="col-12 col-sm-6 col-md-3 sa-card">
+            <div className="col-12 col-sm-6 col-md-6 col-lg-3 sa-card">
                 <div className={`card ${ cardBg }`}>
                     <div className="card-body">
                         <div className="d-flex align-items-center">

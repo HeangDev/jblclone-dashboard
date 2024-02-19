@@ -9,7 +9,7 @@ const SubMenu = ({ item }) => {
     if (item.subNav) {
         return (
             <li className="nav-item">
-                <button type="button" className={item.subNav && subnav ? "nav-link active" : "nav-link"} onClick={item.subNav && showSubNav} data-bs-toggle="collapse">
+                <button type="button" className={item.subNav && subnav ? "nav-link collapsed active" : "nav-link collapsed"} onClick={item.subNav && showSubNav} data-bs-toggle="collapse">
                     {item.icon}
                     <span className="sa-menu-title">{item.title}</span>
                     {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
@@ -19,7 +19,7 @@ const SubMenu = ({ item }) => {
                         {subnav && item.subNav.map((item, index) => {
                             return (
                                 <li className="nav-item" key={index}>
-                                    <NavLink to={item.path} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>{item.title}</NavLink>
+                                    <NavLink to={item.path} className={({ isActive }) => isActive ? "nav-link collapsed active" : "nav-link collapsed"}>{item.title}</NavLink>
                                 </li>
                             )
                         })}
@@ -30,7 +30,7 @@ const SubMenu = ({ item }) => {
     } else {
         return (
             <li className="nav-item">
-                <NavLink to={item.path} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={item.subNav && showSubNav}>
+                <NavLink to={item.path} className={({ isActive }) => isActive ? "nav-link collapsed active" : "nav-link collapsed"} onClick={item.subNav && showSubNav}>
                     {item.icon}
                     <span className="sa-menu-title">{item.title}</span>
                     {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
