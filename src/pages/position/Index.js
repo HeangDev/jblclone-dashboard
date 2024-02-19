@@ -56,31 +56,29 @@ const Index = () => {
                     </div>
                 </div>
                 <div className="card-body">
-                    <div className="table-responsive-sm">
-                        <table className="table table-striped" id="tbl_position">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Software Engineer I</td>
-                                    <td>-</td>
-                                    <td><div className="badge text-bg-success">Active</div></td>
-                                    <td>
-                                        <button type="button" className="btn btn-danger btn-sm me-lg-2"><i className="bi bi-trash3"></i> Delete</button>
-                                        <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> Edit</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table className="table table-striped" id="tbl_position" style={{width: "100%"}}>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Software Engineer I</td>
+                                <td>-</td>
+                                <td><div className="badge text-bg-success">Active</div></td>
+                                <td>
+                                    <button type="button" className="btn btn-danger btn-sm me-2"><i className="bi bi-trash3"></i> Delete</button>
+                                    <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <Modal centered show={show} onHide={handleCloseModal} animation={false}>
