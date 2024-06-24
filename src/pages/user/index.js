@@ -12,14 +12,32 @@ import 'datatables.net-responsive-bs5/js/responsive.bootstrap5'
 
 const List = () => {
     useEffect(() => {
-        if (!$.fn.dataTable.isDataTable("#tbl_employee")) {
+        if (!$.fn.dataTable.isDataTable("#tbl_user")) {
             $(document).ready(function () {
                 setTimeout(function () {
-                    $("#tbl_employee").DataTable({
+                    $("#tbl_user").DataTable({
                         pageLength: 10,
                         processing: true,
                         destroy: true,
                         responsive: true,
+                        language: {
+                            "emptyTable": "ไม่มีข้อมูลในตาราง",
+                            "info": "แสดง _START_ ถึง _END_ จาก _TOTAL_ แถว",
+                            "infoFiltered": "(กรองข้อมูล _MAX_ ทุกแถว)",
+                            "infoThousands": ",",
+                            "lengthMenu": "แสดง _MENU_ แถว",
+                            "loadingRecords": "กำลังโหลดข้อมูล...",
+                            "processing": "กำลังดำเนินการ...",
+                            "zeroRecords": "ไม่พบข้อมูล",
+                            "paginate": {
+                                "first": "หน้าแรก",
+                                "previous": "ก่อนหน้า",
+                                "next": "ถัดไป",
+                                "last": "หน้าสุดท้าย"
+                            },
+                            "search": "ค้นหา:",
+                            "infoEmpty": "แสดงทั้งหมด 0 to 0 of 0 รายการ",
+                        }
                     });
                 }, 0);
             });
@@ -39,7 +57,7 @@ const List = () => {
                     </div>
                 </div>
                 <div className="card-body">
-                    <table className="table table-striped" id="tbl_employee" style={{width: "100%"}}>
+                    <table className="table table-striped" id="tbl_user" style={{width: "100%"}}>
                         <thead>
                             <tr>
                                 <th>#</th>

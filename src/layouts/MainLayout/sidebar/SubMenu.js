@@ -3,12 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 const SubMenu = ({ item }) => {
     const [subnav, setSubNav] = useState(false)
+    const [isHovered, setHovered] = useState(false);
 
     const showSubNav = () => setSubNav(!subnav)
 
     if (item.subNav) {
         return (
-            <li className="nav-item">
+            <li className={isHovered ? "nav-item hover-open" : "nav-item"} onMouseEnter={() => {setHovered(true)}} onMouseLeave={() => {setHovered(false)}}>
                 <button type="button" className={item.subNav && subnav ? "nav-link collapsed active" : "nav-link collapsed"} onClick={item.subNav && showSubNav} data-bs-toggle="collapse">
                     {item.icon}
                     <span className="sa-menu-title">{item.title}</span>
@@ -29,7 +30,7 @@ const SubMenu = ({ item }) => {
         )
     } else {
         return (
-            <li className="nav-item">
+            <li className={isHovered ? "nav-item hover-open" : "nav-item"} onMouseEnter={() => {setHovered(true)}} onMouseLeave={() => {setHovered(false)}}>
                 <NavLink to={item.path} className={({ isActive }) => isActive ? "nav-link collapsed active" : "nav-link collapsed"} onClick={item.subNav && showSubNav}>
                     {item.icon}
                     <span className="sa-menu-title">{item.title}</span>

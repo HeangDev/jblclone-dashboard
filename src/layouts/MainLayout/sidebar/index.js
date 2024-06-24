@@ -4,10 +4,12 @@ import SubMenu from './SubMenu'
 import { SidebarContext } from '../../../context/sidebarContext'
 
 const Sidebar = () => {
-    const [activeLinkIdx] = useState(1);
-    //const [sidebarClass, setSidebarClass] = useState("");
+    const [windowWidth, setWindowWidth] = useState({winWidth: window.innerWidth});
+    
     const { isSidebarOpen } = useContext(SidebarContext);
-    console.log(isSidebarOpen)
+    const handleResize = () => {
+        setWindowWidth({winWidth: window.innerWidth});
+    };
 
     useEffect(() => {
         if(isSidebarOpen){
@@ -15,7 +17,13 @@ const Sidebar = () => {
         } else {
             document.body.classList.remove('sa-sidebar-icon')
         }
-    }, [isSidebarOpen]);
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, [isSidebarOpen, windowWidth]);
     return (
         <>
             <div className="sa-sidebar sa-sidebar-offcanvas">
@@ -25,6 +33,7 @@ const Sidebar = () => {
                         <div className="sa-profile-desc">
                             <p className="sa-name mb-0">Sim Kimheang</p>
                             <p className="sa-position mb-0">Administrator</p>
+                            
                         </div>
                     </div>
                 </div>

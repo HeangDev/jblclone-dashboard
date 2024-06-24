@@ -1,45 +1,37 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import DashboardLayout from './layouts/MainLayout'
 import LoginLayout from './layouts/LoginLayout';
 
 import Dashboard from './pages/dashboard'
 import Login from './pages/login'
 
-import Employee from './pages/employee/Index'
-import AddEmployee from './pages/employee/create'
-import Leaves from './pages/approval/Leaves'
-import Overtime from './pages/approval/Overtime'
+import Customer from './pages/customer/Index'
+import AddCustomer from './pages/customer/create'
+import Deposit from './pages/deposit/index'
+import Withdraw from './pages/withdraw/index'
 
-import DepartmentIndex from './pages/department/Index'
-import PositionIndex from './pages/position/Index'
-import BranchIndex from './pages/branch/Index'
-
-import SummaryLeaves from './pages/request/leaves/summary';
-import ListLeaves from './pages/request/leaves/list';
-import ListOvertime from './pages/request/overtime/list';
-
-import Calendar from './pages/calendar';
+import User from './pages/user/index'
 
 const App = () => {
     return (
         <>
-            <DashboardLayout>
-                <Routes>
+            <Routes>
+                <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                
+                <Route element={<LoginLayout/>}>
+                    <Route path="/login" element={<Login />} />
+                </Route>
+
+                <Route element={<DashboardLayout/>}>
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/employee" element={<Employee />} />
-                    <Route path="/employee/create" element={<AddEmployee />} />
-                    <Route path="/leaves" element={<Leaves />} />
-                    <Route path="/overtime" element={<Overtime />} />
-                    <Route path="/department" element={<DepartmentIndex />} />
-                    <Route path="/position" element={<PositionIndex />} />
-                    <Route path="/branch" element={<BranchIndex />} />
-                    <Route path="/calendar" element={<Calendar />} />
-                    <Route path="/overtime/list" element={<ListOvertime />} />
-                    <Route path="/leave/list" element={<ListLeaves />} />
-                    <Route path="/leave/summary" element={<SummaryLeaves />} />
-                </Routes>
-            </DashboardLayout>
+                    <Route path="/customer" element={<Customer />} />
+                    <Route path="/customer/create" element={<AddCustomer />} />
+                    <Route path="/deposit" element={<Deposit />} />
+                    <Route path="/withdraw" element={<Withdraw />} />
+                    <Route path="/user" element={<User />} />
+                </Route>
+            </Routes>
         </>
     )
 }

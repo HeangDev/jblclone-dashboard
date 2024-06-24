@@ -1,114 +1,37 @@
 export const SidebarData = [
     {
-        title: "Dashboard",
+        title: "หน้าแรก",
         path: "/dashboard",
         icon: <i className="bi bi-speedometer2"></i>,
     },
     {
-        title: "Employee",
-        path: "/employee",
-        icon: <i className="bi bi-people"></i>,
+        title: "ลูกค้า",
+        path: "/customer",
+        icon: <i className="bi bi-person-vcard"></i>,
         iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
         iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
         subNav: [
             {
-                title: "List",
-                path: "/employee",
+                title: "ข้อมูลลูกค้า",
+                path: "/customer",
             },
             {
-                title: "Create",
-                path: "/employee/create",
+                title: "เงินฝาก",
+                path: "/deposit",
             },
             {
-                title: "Attendance",
-                path: "/employee/create",
+                title: "เบิกเงิน",
+                path: "/withdraw",
             }
         ]
     },
     {
-        title: "Leave Requests",
-        icon: <i className="bi bi-clipboard-check"></i>,
-        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
-        subNav: [
-            {
-                title: "My summary",
-                path: "/leave/summary",
-            },
-            {
-                title: "List of leave requests",
-                path: "/leave/list",
-            }
-        ]
+        title: "ผู้ใช้",
+        path: "/user",
+        icon: <i className="bi bi-person"></i>,
     },
     {
-        title: "Overtime",
-        icon: <i className="bi bi-pc-display-horizontal"></i>,
-        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
-        subNav: [
-            {
-                title: "List of overtime",
-                path: "/overtime/list",
-            }
-        ]
-    },
-    {
-        title: "Approval",
-        path: "/approval",
-        icon: <i className="bi bi-check2-circle"></i>,
-        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
-        subNav: [
-            {
-                title: "Leaves",
-                path: "/leaves",
-            },
-            {
-                title: "Overtime",
-                path: "/overtime",
-            }
-        ]
-    },
-    {
-        title: "Department",
-        path: "/department",
-        icon: <i className="bi bi-database"></i>,
-    },
-    {
-        title: "Position",
-        path: "/position",
-        icon: <i className="bi bi-diagram-3"></i>,
-    },
-    {
-        title: "Branch",
-        path: "/branch",
-        icon: <i className="bi bi-building"></i>,
-    },
-    {
-        title: "Calendar",
-        path: "/calendar",
-        icon: <i className="bi bi-calendar2-date"></i>,
-    },
-    {
-        title: "Assets",
-        path: "/assets",
-        icon: <i className="bi bi-keyboard"></i>,
-        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
-        subNav: [
-            {
-                title: "Attendance",
-                path: "/department",
-            },
-            {
-                title: "Leave",
-                path: "/department/create",
-            }
-        ]
-    },
-    {
-        title: "Report",
+        title: "รายงาน",
         path: "/report",
         icon: <i className="bi bi-clipboard2-data"></i>,
         iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
@@ -127,5 +50,5 @@ export const SidebarData = [
                 path: "/department/create",
             }
         ]
-    }
+    },
 ]

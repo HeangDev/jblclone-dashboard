@@ -7,19 +7,19 @@ const Header = () => {
     return (
         <>
             <div className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                <div className="text-center sa-brand-wrapper d-flex align-items-center justify-content-center d-none d-md-block">
-                    <a href="#none" className="navbar-brand sa-logo">
+                <div className="text-center sa-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a href="#none" className="navbar-brand sa-logo d-none d-lg-block">
                         <img src="https://demo.bootstrapdash.com/datavizui/template/demo/vertical-default-light/index.html" alt="logo" className=""/>
                     </a>
                 </div>
-                <div className="sa-menu-wrapper d-flex align-items-center justify-content-between">
+                <div className="sa-menu-wrapper d-flex align-items-center justify-content-between flex-grow-1">
                     <div className="sa-navbar-toggler">
                         <button type="button" className="navbar-toggler navbar-toggler align-self-center d-none d-md-block" onClick={ () => toggleSidebar()}><i className="bi bi-list"></i></button>
                         <button type="button" className="navbar-toggler navbar-toggler align-self-center d-block d-md-none"><i className="bi bi-list"></i></button>
                     </div>
-                    {/* <a href="#none" className="navbar-brand sa-logo-mini">
+                    <a href="#none" className="navbar-brand sa-logo-mini d-lg-none">
                         <img src="#none" alt="logo"/>
-                    </a> */}
+                    </a>
                     <ul className="navbar-nav sa-nav-right">
                         <li className="nav-item dropdown">
                             <button type="button" className="nav-link sa-indicator d-flex align-items-center justify-content-center"><i className="bi bi-bell"></i></button>

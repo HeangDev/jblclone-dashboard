@@ -1,8 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
+
 import Header from './header/index'
 import Sidebar from './sidebar/index'
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = () => {
     return (
         <>
             <div className="sa-wrapper">
@@ -11,7 +13,7 @@ const DashboardLayout = ({ children }) => {
                     <Sidebar/>
                     <div className="sa-main">
                         <div className="sa-content">
-                            {children}
+                            <Outlet />
                         </div>
                     </div>
                 </div>
