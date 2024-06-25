@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashboardCard = ({ cardBg, cardTitle, cardTotal, cardSubtitle }) => {
+const DashboardCard = ({ cardBg, cardTitle, cardIcon, cardTotal, cardSubtitle }) => {
     return (
         <>
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 sa-card">
@@ -8,7 +8,7 @@ const DashboardCard = ({ cardBg, cardTitle, cardTotal, cardSubtitle }) => {
                     <div className="card-body">
                         <div className="d-flex align-items-center">
                             <div className="sa-icon">
-                                <i className="bi bi-clipboard-data"></i>
+                                <i className={`bi ${ cardIcon }`}></i>
                             </div>
                             <p className="sa-title">{cardTitle}</p>
                         </div>

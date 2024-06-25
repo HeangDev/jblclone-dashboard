@@ -11,7 +11,47 @@ import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import 'datatables.net-responsive-bs5/js/responsive.bootstrap5'
 
 const List = () => {
+    const [getUser, setGetUser] = useState()
+
+    /*const fetchUser = async () => {
+        await axios.get(`http://127.0.0.1:8000/api/user`).then(({ data }) => {
+            setGetUser(data)
+        })
+    }*/
+
+    const handleDelete = async (id) => {
+        const isConfirm = await Swal.fire({
+            title: 'คุณต้องการที่จะลบหรือไหม?',
+            text: "ถ้าลบแล้ว คุณจะเปลี่ยนกลับไม่ได้ นะค่ะ!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'ลบข้อมูล',
+            cancelButtonText: 'ยกเลิกการลบ'
+        }).then((result) => {
+            return result.isConfirmed
+        })
+
+        if (!isConfirm) {
+            return;
+        }
+
+        /*await axios.delete(`http://127.0.0.1:8000/api/user/${id}`).then(({ data }) => {
+            Swal.fire({
+                title: 'ความสำเร็จ!',
+                text: "ข้อมูลถูกลบ!",
+                icon: "success",
+                timer: '1500'
+            })
+            fetchUser()
+        }).catch(({ err }) => {
+            console.log(err)
+        })*/
+    }
+
     useEffect(() => {
+        //fetchUser()
         if (!$.fn.dataTable.isDataTable("#tbl_user")) {
             $(document).ready(function () {
                 setTimeout(function () {
@@ -49,10 +89,10 @@ const List = () => {
                 <div className="card-header">
                     <div className="row align-items-center">
                         <div className="col-sm-5">
-                            <h3 className="card-title">Employee List</h3>
+                            <h3 className="card-title">รายชื่อผู้ใช้</h3>
                         </div>
                         <div className="col-sm-7 text-sm-end">
-                            <Link to="/employee/create" className="btn btn-primary">Add Employee</Link>
+                            <Link to="/user/create" className="btn btn-primary">เพิ่มผู้ใช้</Link>
                         </div>
                     </div>
                 </div>
@@ -61,27 +101,28 @@ const List = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Gender</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>Hire Date</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th>อิมเมจ</th>
+                                <th>ชื่อ</th>
+                                <th>ชื่อผู้ใช้</th>
+                                <th>หมายเลขโทรศัพท์</th>
+                                <th>สถานะ</th>
+                                <th>ตัวเลือก</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
+                                <td>-</td>
                                 <td>Sim Kimheang</td>
-                                <td>Male</td>
+                                <td>admin</td>
                                 <td>011263262</td>
-                                <td>simkimheang4@gmail.com</td>
-                                <td>01/01/2021</td>
-                                <td><div className="badge text-bg-success">Working</div></td>
                                 <td>
-                                    <button type="button" className="btn btn-danger btn-sm me-2"><i className="bi bi-trash3"></i> Delete</button>
-                                    <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> Edit</button>
+                                    {/* <div className="badge text-bg-success">ใช้งานอยู่</div> */}
+                                    <div className="badge text-bg-danger">ไม่ได้ผล</div>
+                                </td>
+                                <td>
+                                    <button type="button" className="btn btn-danger btn-sm me-2" onClick={() => handleDelete(1)} ><i className="bi bi-trash3"></i> ลบข้อมูล</button>
+                                    <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> แก้ไขข้อมูล</button>
                                 </td>
                             </tr>
                         </tbody>

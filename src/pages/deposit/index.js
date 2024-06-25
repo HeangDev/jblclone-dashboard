@@ -3,6 +3,8 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import { useForm } from "react-hook-form";
 
+import { currencyFormat } from '../../utils/Formatter'
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -44,7 +46,8 @@ const List = () => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'ลบข้อมูล'
+            confirmButtonText: 'ลบข้อมูล',
+            cancelButtonText: 'ยกเลิกการลบ'
         }).then((result) => {
             return result.isConfirmed
         })
@@ -60,7 +63,7 @@ const List = () => {
                 icon: "success",
                 timer: '1500'
             })
-            fetchDeposit()
+            fetchWithdraw()
         }).catch(({ err }) => {
             console.log(err)
         })*/
@@ -132,7 +135,7 @@ const List = () => {
                                 <td>-</td>
                                 <td>01/01/2021</td>
                                 <td>
-                                    <button type="button" className="btn btn-danger btn-sm me-2"><i className="bi bi-trash3" onClick={() => handleDelete()}></i> ลบข้อมูล</button>
+                                    <button type="button" className="btn btn-danger btn-sm me-2"><i className="bi bi-trash3" onClick={() => handleDelete(1)} ></i> ลบข้อมูล</button>
                                     <button type="button" className="btn btn-info btn-sm"><i className="bi bi-pencil-square"></i> แก้ไขข้อมูล</button>
                                 </td>
                             </tr>

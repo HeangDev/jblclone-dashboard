@@ -4,26 +4,41 @@ export const SidebarData = [
         path: "/dashboard",
         icon: <i className="bi bi-speedometer2"></i>,
     },
+    // {
+    //     title: "ลูกค้า",
+    //     path: "/customer",
+    //     icon: <i className="bi bi-person-vcard"></i>,
+    //     iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
+    //     iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
+    //     subNav: [
+    //         {
+    //             title: "ข้อมูลลูกค้า",
+    //             path: "/customer",
+    //         },
+    //         {
+    //             title: "เงินฝาก",
+    //             path: "/deposit",
+    //         },
+    //         {
+    //             title: "เบิกเงิน",
+    //             path: "/withdraw",
+    //         }
+    //     ]
+    // },
     {
         title: "ลูกค้า",
         path: "/customer",
         icon: <i className="bi bi-person-vcard"></i>,
-        iconClosed: <i className="bi bi-chevron-right sa-menu-arrow"></i>,
-        iconOpened: <i className="bi bi-chevron-down sa-menu-arrow"></i>,
-        subNav: [
-            {
-                title: "ข้อมูลลูกค้า",
-                path: "/customer",
-            },
-            {
-                title: "เงินฝาก",
-                path: "/deposit",
-            },
-            {
-                title: "เบิกเงิน",
-                path: "/withdraw",
-            }
-        ]
+    },
+    {
+        title: "เงินฝาก",
+        path: "/deposit",
+        icon: <i class="bi bi-piggy-bank"></i>,
+    },
+    {
+        title: "เบิกเงิน",
+        path: "/withdraw",
+        icon: <i class="bi bi-cash-coin"></i>,
     },
     {
         title: "ผู้ใช้",

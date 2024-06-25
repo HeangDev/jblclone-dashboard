@@ -12,6 +12,7 @@ import Deposit from './pages/deposit/index'
 import Withdraw from './pages/withdraw/index'
 
 import User from './pages/user/index'
+import AddUser from './pages/user/create'
 
 const App = () => {
     return (
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/deposit" element={<Deposit />} />
                     <Route path="/withdraw" element={<Withdraw />} />
                     <Route path="/user" element={<User />} />
+                    <Route path="/user/create" element={<AddUser />} />
                 </Route>
             </Routes>
         </>

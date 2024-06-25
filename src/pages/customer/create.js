@@ -18,31 +18,31 @@ const create = () => {
                 <div className="card-body">
                     <form className="row g-3" autoComplete="off">
                         <div className="col-12 col-md-6">
-                            <label class="required form-label">ชื่อลูกค้า</label>
+                            <label className="required form-label">ชื่อลูกค้า</label>
                             <input
-                                placeholder="ใส่รชื่อลูกค้า" type="text" class="form-control" value=""
+                                placeholder="ใส่รชื่อลูกค้า" type="text" className="form-control" value=""
                             />
                         </div>
                         <div className="col-12 col-md-6">
-                            <label class="required form-label">เบอร์ติดต่อฉุกเฉิน</label>
+                            <label className="required form-label">เบอร์ติดต่อฉุกเฉิน</label>
                             <input
-                                placeholder="ใส่รเบอร์ติดต่อฉุกเฉิน" type="text" class="form-control" value=""
+                                placeholder="ใส่รเบอร์ติดต่อฉุกเฉิน" type="text" className="form-control" value=""
                             />
                         </div>
                         <div className="col-12 col-md-6">
-                            <label class="required form-label">ตั้งรหัสผ่าน</label>
+                            <label className="required form-label">ตั้งรหัสผ่าน</label>
                             <input
-                                placeholder="" type="text" class="form-control" value=""
+                                placeholder="" type="text" className="form-control" value=""
                             />
                         </div>
                         <div className="col-12 col-md-6">
-                            <label class="form-label">ที่อยู่ปัจจุบัน</label>
+                            <label className="form-label">ที่อยู่ปัจจุบัน</label>
                             <input
-                                placeholder="" type="text" class="form-control" value=""
+                                placeholder="" type="text" className="form-control" value=""
                             />
                         </div>
                         <div className="col-12 col-md-6">
-                            <label class="form-label">บัญชีธนาคาร</label>
+                            <label className="form-label">บัญชีธนาคาร</label>
                             <select className="form-control">
                                 <option value="ธนาคารไทยพาณิชย์ (SCB)">ธนาคารไทยพาณิชย์ (SCB)</option>
                                 <option value="ธนาคาร กสิกรไทย (KBANK)">ธนาคาร กสิกรไทย (KBANK)</option>
@@ -60,14 +60,14 @@ const create = () => {
                             </select>
                         </div>
                         <div className="col-12 col-md-6">
-                            <label class="required form-label">หมายเลขบัญชี</label>
+                            <label className="required form-label">หมายเลขบัญชี</label>
                             <input
-                                placeholder="" type="text" class="form-control" value=""
+                                placeholder="" type="text" className="form-control" value=""
                             />
                         </div>
                         <div className="col-12">
-                            <label class="form-label">ข้อมูลอื่น</label>
-                            <textarea class="form-control" rows={3} placeholder="ใส่คำอธิบาย"value=""></textarea>
+                            <label className="form-label">ข้อมูลอื่น</label>
+                            <textarea className="form-control" rows={3} placeholder="ใส่คำอธิบาย"value=""></textarea>
                         </div>
                         <div className="d-flex justify-content-end">
                             <button type="submit" className="btn btn-success">ประหยัด</button>

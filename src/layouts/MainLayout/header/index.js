@@ -27,7 +27,7 @@ const Header = () => {
 
                             </div>
                         </li>
-                        <li className="nav-item sa-nav-language dropdown">
+                        {/* <li className="nav-item sa-nav-language dropdown">
                             <button type="button" className="nav-link sa-indicator d-flex align-items-center justify-content-center">
                                 <Icon icon="flag:kh-4x3" width="24" />
                                 <p className="mb-0 ms-1">Khmer</p>
@@ -35,7 +35,7 @@ const Header = () => {
                             <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list">
 
                             </div>
-                        </li>
+                        </li> */}
                         <li className="nav-item sa-nav-logout dropdown">
                             <button type="button" className="nav-link sa-indicator d-flex align-items-center justify-content-center"><i className="bi bi-box-arrow-right"></i></button>
                             <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list">
